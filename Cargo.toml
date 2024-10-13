@@ -5,11 +5,15 @@ edition = "2021"
 
 
 [dependencies]
-bitcoincore-rpc = "0.19.0"
+bitcoincore-rpc = { version = "0.19.0" }
 bitcoincore-rpc-json = "0.19.0" 
 mysql = "*" 
 warp = "0.3"
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde", "default"] }
 
+[[bin]]
+name = "project-rust"
+path = "src/main.rs"
