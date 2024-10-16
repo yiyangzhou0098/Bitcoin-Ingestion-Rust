@@ -31,16 +31,4 @@ async fn main() {
     run_server(mysql_service, bitcoin_service).await;
 }
 
-// extern crate bitcoincore_rpc;
-// use bitcoincore_rpc::{Auth, Client, RpcApi};
-
-// mod config;
-// use config::connections::{RPC_URL,RPC_PWD,RPC_USER};
-// fn main() {
-
-//     let rpc = Client::new(RPC_URL,
-//                           Auth::UserPass(RPC_USER.to_string(),
-//                                          RPC_PWD.to_string())).unwrap();
-//     let best_block_hash = rpc.get_best_block_hash().unwrap();
-//     println!("best block hash: {}", best_block_hash);
-// }
+// #TODO Get transactions has severe bug
