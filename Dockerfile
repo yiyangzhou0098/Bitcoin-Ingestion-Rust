@@ -76,6 +76,8 @@ FROM rust:1.81.0-alpine AS build
 # Install dependencies required for building (including OpenSSL)
 RUN apk add --no-cache clang lld musl-dev git openssl-dev pkgconfig
 
+ENV OPENSSL_DIR=/usr
+
 # Set the working directory
 WORKDIR /app
 
