@@ -74,7 +74,7 @@ pub async fn run_server(mysql_service: Arc<MySqlService>, bitcoin_service: Arc<B
 
     // Start the warp server
     warp::serve(routes)
-        .run(([127, 0, 0, 1], 3030))
+        .run(([0, 0, 0, 0], 3030))
         .await;
 }
 
